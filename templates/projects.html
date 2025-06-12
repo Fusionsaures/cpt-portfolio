@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="projects">
+    <h2>Projects</h2>
+    {% for project in projects %}
+        <div class="project-card">
+            <button class="dropdown-btn">{{ project.title }} <span class="project-date">({{ project.date }})</span></button>
+            <div class="dropdown-content">
+                <p>{{ project.description }}</p>
+                <img src="{{ project.image }}" alt="{{ project.title }} screenshot">
+            </div>
+        </div>
+    {% endfor %}
+</section>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="reading">
+    <h2>Reading List</h2>
+    {% for book in books %}
+        <div class="reading-entry">
+            <h3>{{ book.title }} by {{ book.author }}</h3>
+            <p>{{ book.summary }}</p>
+        </div>
+    {% endfor %}
+</section>
+{% endblock %}

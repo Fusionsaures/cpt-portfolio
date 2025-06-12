@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="timeline">
+    <h2>My Timeline</h2>
+    {% for item in timeline %}
+        <div class="timeline-event">
+            <h3>{{ item.year }} - {{ item.description }}</h3>
+            <p>{{ item.detail }}</p>
+        </div>
+    {% endfor %}
+</section>
+{% endblock %}
